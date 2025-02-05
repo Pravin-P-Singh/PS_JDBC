@@ -13,7 +13,7 @@ public class ProductController {
 		do {
 			System.out.println("1. Add Product");
             System.out.println("2. Delete Product");
-            System.out.println("3. Get perticular Product By Id");
+            System.out.println("3. Get particular Product By Id");
             System.out.println("4. Update Particular Product");
             System.out.println("5. Retrieve All Products");
             System.out.println("6. Retrieve All Products in Ascending Order");
@@ -35,15 +35,23 @@ public class ProductController {
 	            	break;
 	            }
 	            case 2 : {
-	            	
+	            	System.out.println("Enter the product id to delete product : ");
+	            	int productId = sc.nextInt();
+	            	String message = productService.deleteProduct(productId);
+	            	System.out.println(message);
 	            	break;
 	            }
 	            case 3 : {
-	            	
+	            	System.out.println("Enter the product id to fetch product : ");
+	            	int productId = sc.nextInt();
+	            	Object obj = productService.getProductById(productId);
+	            	System.out.println(obj);
 	            	break;
 	            }
 	            case 4 : {
-	            	
+	            	Product product = ProductUtility.createProduct();
+	            	String message = productService.updateProduct(product);
+	            	System.out.println(message);
 	            	break;
 	            }
 	            case 5 : {

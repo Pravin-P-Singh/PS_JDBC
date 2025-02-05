@@ -10,7 +10,7 @@ public class Product {
 	private String productManufacturingDate;
 	private String productExpiryDate;
 	
-	Product(){
+	public Product(){
 		super();
 	}
 
